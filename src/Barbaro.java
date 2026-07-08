@@ -1,0 +1,2 @@
+public class Barbaro {
+}
