@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Personagem a = new Guerreiro("Gimli", "Anao", 5);
+        Personagem a = new Barbaro("Gimli", "Anao", 5);
         System.out.println("Nome: " + a.getNome());
         System.out.println("Raca: " + a.getRaca());
         System.out.println("Nivel: " + a.getNivel());

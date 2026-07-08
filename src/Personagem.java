@@ -97,10 +97,10 @@ public abstract class Personagem implements Combate {
     public String ataque(int dificuldade) {
         int rolagem = ThreadLocalRandom.current().nextInt(1, 21) + acerto;
         if (rolagem >= dificuldade) {
-            return getNome() + " desferiu " + ThreadLocalRandom.current().nextInt(1, dano + 1) + " de dano.";
+            return getDescricaoAtaqueSucesso();
         }
         else {
-            return getNome() + " errou seu golpe.";
+            return getDescricaoAtaqueFalha();
         }
     }
     @Override
@@ -114,5 +114,13 @@ public abstract class Personagem implements Combate {
         else {
             return getNome() + " desviou do golpe inimigo.";
         }
+    }
+    // Métodos padrão caso a classe filha não queira customizar
+    public String getDescricaoAtaqueSucesso() {
+        return getNome() + " acertou o golpe causando " + ThreadLocalRandom.current().nextInt(1, dano + 1) + " de dano.";
+    }
+
+    public String getDescricaoAtaqueFalha() {
+        return getNome() + " errou o golpe.";
     }
 }
