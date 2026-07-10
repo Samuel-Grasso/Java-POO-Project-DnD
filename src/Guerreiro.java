@@ -10,8 +10,8 @@ public class Guerreiro extends Personagem{
         setatributos();
     }
     @Override
-    public String getDescricaoAtaqueSucesso() {
-        return getNome() + " brandiu sua espada e causou " + ThreadLocalRandom.current().nextInt(1, dano + 1) + " de dano!";
+    public String getDescricaoAtaqueSucesso(int danorolado) {
+        return getNome() + " brandiu sua espada e causou " + danorolado + " de dano!";
     }
 
     @Override

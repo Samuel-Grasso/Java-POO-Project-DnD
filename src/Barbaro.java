@@ -10,8 +10,8 @@ public class Barbaro extends Personagem{
         setatributos();
     }
     @Override
-    public String getDescricaoAtaqueSucesso() {
-        return getNome() + " furiosamente acertou seu machado e causou " + ThreadLocalRandom.current().nextInt(1, dano + 1) + " de dano!";
+    public String getDescricaoAtaqueSucesso(int danorolado) {
+        return getNome() + " furiosamente acertou seu machado e causou " + danorolado + " de dano!";
     }
 
     @Override

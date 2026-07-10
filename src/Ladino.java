@@ -10,8 +10,8 @@ public class Ladino extends Personagem {
         setatributos();
     }
     @Override
-    public String getDescricaoAtaqueSucesso() {
-        return getNome() + " sorrateiramente brandiu sua adaga e causou " + ThreadLocalRandom.current().nextInt(1, dano + 1) + " de dano!";
+    public String getDescricaoAtaqueSucesso(int danorolado) {
+        return getNome() + " sorrateiramente brandiu sua adaga e causou " + danorolado + " de dano!";
     }
 
     @Override

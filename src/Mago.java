@@ -10,8 +10,8 @@ public class Mago extends Personagem{
         setatributos();
     }
     @Override
-    public String getDescricaoAtaqueSucesso() {
-        return getNome() + " lançou uma bola de fogo e causou " + ThreadLocalRandom.current().nextInt(1, dano + 1) + " de dano!";
+    public String getDescricaoAtaqueSucesso(int danorolado) {
+        return getNome() + " lançou uma bola de fogo e causou " + danorolado + " de dano!";
     }
 
     @Override

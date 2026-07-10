@@ -10,8 +10,8 @@ public class Patrulheiro extends Personagem{
         setatributos();
     }
     @Override
-    public String getDescricaoAtaqueSucesso() {
-        return getNome() + " lançou sua flecha certeira e causou " + ThreadLocalRandom.current().nextInt(1, dano + 1) + " de dano!";
+    public String getDescricaoAtaqueSucesso(int danorolado) {
+        return getNome() + " lançou sua flecha certeira e causou " + danorolado + " de dano!";
     }
 
     @Override
